@@ -2,12 +2,11 @@
 let botaoAdicionar = document.querySelector('.adicionar');
 let botaoCancelar = document.querySelector('.cancelar');
 let form = document.querySelector('form');
-let botaoEsconder2 = document.querySelector('.esconder2');
 
 // Ao clicar no botão Adicionar, remove a classe que esconde o formulário.
 botaoAdicionar.addEventListener('click', (event) => {
     form.classList.remove('inativo');
-    botaoEsconder2.classList.add('esconder');
+    botaoAdicionar.classList.add('esconder');
     event.preventDefault();
 });
 
@@ -15,7 +14,7 @@ botaoAdicionar.addEventListener('click', (event) => {
 botaoCancelar.addEventListener('click', (event) => {
     form.classList.add('inativo');
     form.reset();
-    botaoEsconder2.classList.remove('esconder');
+    botaoAdicionar.classList.remove('esconder');
     event.preventDefault();
 });
 
@@ -23,7 +22,7 @@ botaoCancelar.addEventListener('click', (event) => {
 let idTabela = document.querySelector('table');
 form.addEventListener('submit', (event) => {
     event.preventDefault();
-    botaoEsconder2.classList.remove('esconder');
+    botaoAdicionar.classList.remove('esconder');
     // Cria um objeto com os dados do profissional
     let profissional = {
         id: idTabela.tBodies[0].rows.length + 1,

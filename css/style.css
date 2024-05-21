@@ -184,8 +184,8 @@ input, select {
 
 .table-container {
     width: 100%;
-    max-height: 73.1vh;
-    min-height: 73.1vh;
+    max-height: 84vh;
+    min-height: 71.4vh;
     overflow-x: auto;
     overflow-y: auto;
 }

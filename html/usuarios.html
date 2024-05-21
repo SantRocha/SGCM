@@ -7,7 +7,8 @@
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="stylesheet" type="text/css" href="../css/style.css" id="linkTema">
     <script src="../javascript/tema.js" defer></script>
-    <script src="../javascript/usuarios.js"></script>
+    <script src="../javascript/usuarios.js" defer></script>
+    <script src="../javascript/gerasenha.js" defer></script>
 </head>
 <body>
     <header>
@@ -48,5 +49,66 @@
             <li><a href="usuarios.html">Usuários</a></li>
         </ul>
     </nav>
+    <main>
+        <form action="" class="inativo">
+            <div class="grid">
+                <label for="nomeCompletoUsuario">Nome Completo</label>
+                <input type="text" name="nomeCompleto" required>
+                
+                <label for="nomeUsuario">Nome de Usuário</label>
+                <input type="text" name="nomeUsuario" required>
+
+                <label for="papel">Função</label>
+                <select name="funcao" required>
+                    <option value=""></option>
+                    <option value="1">ADMIN</option>
+                    <option value="2">ATENDENTE</option>
+                </select>
+
+                <label for="senha">Senha</label>
+                <input type="password" name="senha" required>
+
+                <span></span>
+                <input type="submit" value="Enviar" class="enviar">
+                <span></span>
+                <input type="button" value="Cancelar" class="cancelar">
+                <span></span>
+            </div>
+        </form>
+        
+        <a href="" class="adicionar">Adicionar</a>
+        <!--Tabela com 8 colunas e 5 linhas-->
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <td>ID</td>
+                        <td>Ativo</td>
+                        <td>Nome</td>
+                        <td>Usuário</td>
+                        <td>Função</td>
+                        <td>Senha</td>
+                        <td>Ações</td>
+                    </tr>
+                </thead>
+                <tbody>
+                <!-- tr*5>td{$}+td{x}*6+td{Editar | Excluir} -->
+                <!-- tr*5>td{$}+td{x}*6+td>a[href="javascript:void(0)"]{Editar}+{ | }+a[href="javascript:void(0)"]{Excluir} -->
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="7">Total de registros <span id="total"></span></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </main>
+    <footer>
+        <div>
+            <span>Telefone de contato: (68) 99913-2145</span>
+            <span>|</span>
+            <span>Email de contato <a href="#">suporte.sgcm@ufac.br</a></span>
+        </div>
+    </footer>
 </body>
 </html>
