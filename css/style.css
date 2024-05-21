@@ -126,6 +126,9 @@ main {
     margin-bottom: 10px;
 }
 
+.esconder{
+    display: none;
+}
 
 /****************************
 **** F O R M U L A R I O ****
@@ -213,9 +216,12 @@ tbody tr:hover {
     background-color: #639ddfcc;
 }
 
+table td:nth-child(2) {
+    white-space: nowrap;
+}
+
 table td:last-child {
     white-space: nowrap;
-    width: 50px;
 }
 
 .editar, .excluir {

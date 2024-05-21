@@ -6,6 +6,7 @@
     <title>Profissionais</title>
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="stylesheet" type="text/css" href="../css/style.css" id="linkTema">
+    <script src="../javascript/tema.js" defer></script>
     <script src="../javascript/script.js" defer></script>
 </head>
 <body>
@@ -44,7 +45,7 @@
             <li><a href="profissionais.html" target="_self">Profissionais</a></li>
             <li><a href="unidades.html">Unidades</a></li>
             <li><a href="especialidades.html">Especialidades</a></li>
-            <li><a href="usuarios.html">Usúarios</a></li>
+            <li><a href="usuarios.html">Usuários</a></li>
         </ul>
     </nav>
     <main>
@@ -86,7 +87,7 @@
             </div>
         </form>
         
-        <a href="" class="adicionar">Adicionar</a>
+        <div class="esconder2"><a href="" class="adicionar">Adicionar</a></div>
         <!--Tabela com 8 colunas e 5 linhas-->
         <div class="table-container">
             <table>
@@ -108,7 +109,7 @@
                 </tbody>
                 <tfoot>
                     <tr>
-                        <td colspan="8">Total de registros</td>
+                        <td colspan="8">Total de registros <span id="total"></span></td>
                     </tr>
                 </tfoot>
             </table>
