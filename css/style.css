@@ -318,6 +318,11 @@ footer, footer a {
     /**************************
     ***** F I M   M E N U *****
     ***************************/
+
+    .table-container {
+        max-height: 84vh;
+        min-height: 66vh;
+    }
 }
 
 
