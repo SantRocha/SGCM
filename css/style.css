@@ -319,10 +319,6 @@ footer, footer a {
     ***** F I M   M E N U *****
     ***************************/
 
-    .table-container {
-        max-height: 84vh;
-        min-height: 60vh;
-    }
 }
 
 
@@ -333,6 +329,11 @@ footer, footer a {
 
     .cancelar {
         margin-bottom: 20px;
+    }
+
+    .table-container {
+        max-height: 84vh;
+        min-height: 50vh;
     }
 }
 
