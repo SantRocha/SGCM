@@ -1,23 +1,3 @@
-// Cria a funcionalidade dos botões adicionar e cancelar da página que controlam o formulário. funcao adicionada para esconder
-let botaoAdicionar = document.querySelector('.adicionar');
-let botaoCancelar = document.querySelector('.cancelar');
-let form = document.querySelector('form');
-
-// Ao clicar no botão Adicionar, remove a classe que esconde o formulário.
-botaoAdicionar.addEventListener('click', (event) => {
-    form.classList.remove('inativo');
-    botaoAdicionar.classList.add('esconder');
-    event.preventDefault();
-});
-
-// Ao clicar no botão Cancelar, adiciona a classe que esconde o formulário e o reseta. foi adicionado um variavel botaoEsconder2.classList.remove('.esconder');
-botaoCancelar.addEventListener('click', (event) => {
-    form.classList.add('inativo');
-    form.reset();
-    botaoAdicionar.classList.remove('esconder');
-    event.preventDefault();
-});
-
 // Adiciona funcionalidade ao botão Enviar e envia os dados do formulário para a tabela
 let idTabela = document.querySelector('table');
 form.addEventListener('submit', (event) => {
@@ -37,7 +17,6 @@ form.addEventListener('submit', (event) => {
     inserirProfissional(profissional);
     form.reset();
     form.classList.add('inativo');
-    console.log(profissional)
 });
 
 // Adiciona as informações na tabela
