@@ -330,11 +330,6 @@ footer, footer a {
     .cancelar {
         margin-bottom: 20px;
     }
-
-    .table-container {
-        max-height: 84vh;
-        min-height: 50vh;
-    }
 }
 
  @media screen and (max-width: 500px) {
