@@ -37,6 +37,11 @@ if (tema) {
     mudaTema(tema)
 }
 
+// Cria a funcionalidade que informa a pagina selecionada no menu
+var elemento = document.querySelector('[href="#"]');
+elemento.style.backgroundColor = "white";
+elemento.style.color = "black";
+
 // Cria a funcionalidade dos botões adicionar e cancelar da página que controlam o formulário. funcao adicionada para esconder
 let botaoAdicionar = document.querySelector('.adicionar');
 let botaoCancelar = document.querySelector('.cancelar');
