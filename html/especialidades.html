@@ -3,11 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atendimento</title>
+    <title>Especialidades</title>
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="stylesheet" type="text/css" href="../css/style.css" id="linkTema">
     <script src="../javascript/funcionalidades.js" defer></script>
-    <script src="../javascript/atendimentos.js" defer></script>
+    <script src="../javascript/especialidades.js" defer></script>
+    <style>
+        .grid {
+            grid-template-columns: 3fr 1fr 3fr;
+        }
+        .especial {
+            grid-template-columns: 1fr 6fr;
+            margin-top: 20px;
+            margin-bottom: 25px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -40,41 +50,38 @@
         <ul class="menu" id="menu">
             <li><a href="home.html" target="_parent">Home</a></li>
             <li><a href="pacientes.html" target="_parent">Pacientes</a></li>
-            <li><a href="#" target="_self">Atendimento</a></li>
+            <li><a href="atendimentos.html" target="_parent">Atendimento</a></li>
             <li><a href="convenio.html" target="_parent">Convenio</a></li>
             <li><a href="profissionais.html" target="_parent">Profissionais</a></li>
             <li><a href="unidades.html" target="_parent">Unidades</a></li>
-            <li><a href="especialidades.html" target="_parent">Especialidades</a></li>
+            <li><a href="#" target="_blank">Especialidades</a></li>
             <li><a href="usuarios.html" target="_parent">Usuários</a></li>
         </ul>
     </nav>
     <main>
-        <form action="" class="inativo">
-            <div class="grid">
-                <label for="nomeCompletoUsuario">Data</label>
-                <input type="datetime" name="data" required>
-                
-                <label for="nomeUsuario">Hora</label>
-                <input type="time" name="hora" required>
+        <form action="" class="inatvo">
+            <div class="grid especial">
+                <label for="especialidade">Especialidade</label>
+                <input type="text" name="especialidade" id="especialidade" required>
+            </div>
 
-                <span></span>
-                <input type="submit" value="Agendar" class="enviar">
+            <div class="grid">
+            
+                <input type="submit" value="Enviar" class="enviar">
                 <span></span>
                 <input type="button" value="Cancelar" class="cancelar">
                 <span></span>
             </div>
         </form>
         
-        <a href="" class="adicionar">Agendar</a>
+        <a href="" class="adicionar">Adicionar</a>
         <!--Tabela com 8 colunas e 5 linhas-->
         <div class="table-container">
             <table>
                 <thead>
                     <tr>
                         <td>ID</td>
-                        <td>Data</td>
-                        <td>Hora</td>
-                        <td>Status</td>
+                        <td>Especialidade</td>
                         <td>Ações</td>
                     </tr>
                 </thead>
@@ -84,7 +91,7 @@
                 </tbody>
                 <tfoot>
                     <tr>
-                        <td colspan="5">Total de registros <span id="total"></span></td>
+                        <td colspan="8">Total de registros <span id="total"></span></td>
                     </tr>
                 </tfoot>
             </table>

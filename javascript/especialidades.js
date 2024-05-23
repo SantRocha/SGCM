@@ -3,45 +3,30 @@ let idTabela = document.querySelector('table');
 form.addEventListener('submit', (event) => {
     event.preventDefault();
     botaoAdicionar.classList.remove('esconder');
-    // Cria um objeto com os dados do profissional
-    let profissional = {
+    // Cria um objeto com os dados da especialidade
+    let especialidade = {
         id: idTabela.tBodies[0].rows.length + 1,
-        nome: form.nomeProfissional.value,
-        registro: form.registroProfissional.value,
-        email: form.emailProfissional.value,
-        telefone: form.telefoneProfissional.value, 
-        unidade: form.unidadeProfissional.options[form.unidadeProfissional.selectedIndex].text,
-        especialidade: form.especialidadeProfissional.options[form.especialidadeProfissional.selectedIndex].text
+        nome: form.especialidade.value
     };
-    // Insere o profissional na tabela
-    inserirProfissional(profissional);
+    // Insere a especialidade na tabela
+    inserirEspecialidade(especialidade);
     form.reset();
     form.classList.add('inativo');
 });
 
 // Adiciona as informações na tabela
-const inserirProfissional = (item) => {
+const inserirEspecialidade = (item) => {
     let tabela = document.querySelector('table');
 
-    // Cria elementos de célula para cada informação do profissional
+    // Cria elementos de célula para cada informação da especialidade
     let linha = document.createElement('tr');
     let id = document.createElement('td');
-    let nome = document.createElement('td');
-    let conselho = document.createElement('td');
-    let email = document.createElement('td');
-    let telefone = document.createElement('td');
-    let unidade = document.createElement('td');
     let especialidade = document.createElement('td');
     let acoes = document.createElement('td');
 
-    // Define o texto de cada célula com as informações do profissional
+    // Define o texto de cada célula com as informações da especialidade89
     id.textContent = item.id;
-    nome.textContent = item.nome;
-    conselho.textContent = item.registro;
-    email.textContent = item.email;
-    telefone.textContent = item.telefone;
-    unidade.textContent = item.unidade;
-    especialidade.textContent = item.especialidade;
+    especialidade.textContent = item.nome;
 
     // Adiciona os botões de ação na célula de ações
     acoes.innerHTML = ` <a class="editar">Editar</a>
@@ -49,12 +34,7 @@ const inserirProfissional = (item) => {
 
     // Adiciona as células à linha da tabela
     linha.appendChild(id);
-    linha.appendChild(nome);
-    linha.appendChild(conselho);
-    linha.appendChild(email);
-    linha.appendChild(telefone);
-    linha.appendChild(unidade);
-    linha.appendChild(especialidade);
+    linha.appendChild(especialidade)
     linha.appendChild(acoes);
 
     // Adiciona a linha à tabela
@@ -72,14 +52,14 @@ const inserirProfissional = (item) => {
 // Carrega as Informações do JSON na tabela
 const carregaTabela = () => {
     // Define a URL do arquivo JSON
-    let url = 'https://my-json-server.typicode.com/juniorlimeiras/json/profissionais'
+    let url = 'https://my-json-server.typicode.com/juniorlimeiras/json/especialidades'
     // Realiza uma solicitação fetch para obter os dados do JSON
     fetch(url).then(resposta => {
         return resposta.json();
     }).then(dados => {
-        // Para cada item no JSON, insere o profissional na tabela
+        // Para cada item no JSON, insere a especialidade na tabela
         for(const item of dados) {
-            inserirProfissional(item);
+            inserirEspecialidade(item);
         }
     }).catch(erro => (
         console.error(erro)

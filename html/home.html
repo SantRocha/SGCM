@@ -3,11 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atendimento</title>
+    <title>Home</title>
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="stylesheet" type="text/css" href="../css/style.css" id="linkTema">
     <script src="../javascript/funcionalidades.js" defer></script>
-    <script src="../javascript/atendimentos.js" defer></script>
+    <script src="../javascript/home.js" defer></script>
+    <style>
+        #legal {
+            font-size: 38.3vh;
+            text-align: center;
+            margin-bottom: 31.9vh;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -38,9 +45,9 @@
             <span></span>
         </div>
         <ul class="menu" id="menu">
-            <li><a href="home.html" target="_parent">Home</a></li>
+            <li><a href="#" target="_self">Home</a></li>
             <li><a href="pacientes.html" target="_parent">Pacientes</a></li>
-            <li><a href="#" target="_self">Atendimento</a></li>
+            <li><a href="atendimentos.html" target="_parent">Atendimento</a></li>
             <li><a href="convenio.html" target="_parent">Convenio</a></li>
             <li><a href="profissionais.html" target="_parent">Profissionais</a></li>
             <li><a href="unidades.html" target="_parent">Unidades</a></li>
@@ -49,46 +56,7 @@
         </ul>
     </nav>
     <main>
-        <form action="" class="inativo">
-            <div class="grid">
-                <label for="nomeCompletoUsuario">Data</label>
-                <input type="datetime" name="data" required>
-                
-                <label for="nomeUsuario">Hora</label>
-                <input type="time" name="hora" required>
-
-                <span></span>
-                <input type="submit" value="Agendar" class="enviar">
-                <span></span>
-                <input type="button" value="Cancelar" class="cancelar">
-                <span></span>
-            </div>
-        </form>
-        
-        <a href="" class="adicionar">Agendar</a>
-        <!--Tabela com 8 colunas e 5 linhas-->
-        <div class="table-container">
-            <table>
-                <thead>
-                    <tr>
-                        <td>ID</td>
-                        <td>Data</td>
-                        <td>Hora</td>
-                        <td>Status</td>
-                        <td>Ações</td>
-                    </tr>
-                </thead>
-                <tbody>
-                <!-- tr*5>td{$}+td{x}*6+td{Editar | Excluir} -->
-                <!-- tr*5>td{$}+td{x}*6+td>a[href="javascript:void(0)"]{Editar}+{ | }+a[href="javascript:void(0)"]{Excluir} -->
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <td colspan="5">Total de registros <span id="total"></span></td>
-                    </tr>
-                </tfoot>
-            </table>
-        </div>
+        <p id="legal">👍</p>
     </main>
     <footer>
         <div>
