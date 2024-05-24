@@ -2,7 +2,6 @@
 let idTabela = document.querySelector('table');
 form.addEventListener('submit', (event) => {
     event.preventDefault();
-    botaoAdicionar.classList.remove('esconder');
     // Cria um objeto com os dados do profissional
     let profissional = {
         id: idTabela.tBodies[0].rows.length + 1,
@@ -17,6 +16,7 @@ form.addEventListener('submit', (event) => {
     inserirProfissional(profissional);
     form.reset();
     form.classList.add('inativo');
+    botaoAdicionar.classList.remove('inativo');
 });
 
 // Adiciona as informações na tabela

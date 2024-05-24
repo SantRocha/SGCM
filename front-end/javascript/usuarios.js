@@ -15,7 +15,7 @@ form.addEventListener('submit', (event) => {
     inserirUsuario(usuario);
     form.reset();
     form.classList.add('inativo');
-    botaoAdicionar.classList.remove('esconder');
+    botaoAdicionar.classList.remove('inativo');
 });
 
 // Adiciona as informações na tabela

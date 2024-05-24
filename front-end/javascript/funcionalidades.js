@@ -50,7 +50,7 @@ let form = document.querySelector('form');
 // Ao clicar no botão Adicionar, remove a classe que esconde o formulário.
 botaoAdicionar.addEventListener('click', (event) => {
     form.classList.remove('inativo');
-    botaoAdicionar.classList.add('esconder');
+    botaoAdicionar.classList.add('inativo');
     event.preventDefault();
 });
 
@@ -58,6 +58,6 @@ botaoAdicionar.addEventListener('click', (event) => {
 botaoCancelar.addEventListener('click', (event) => {
     form.classList.add('inativo');
     form.reset();
-    botaoAdicionar.classList.remove('esconder');
+    botaoAdicionar.classList.remove('inativo');
     event.preventDefault();
 });
