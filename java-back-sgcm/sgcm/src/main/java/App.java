@@ -1,3 +1,5 @@
+import java.sql.Connection;
+
 import br.ufac.sgcm.dao.ConexaoDB;
 import br.ufac.sgcm.model.Especialidade;
 import br.ufac.sgcm.model.Profissional;
@@ -30,6 +32,12 @@ public class App {
 
         ConexaoDB conexao = new ConexaoDB();
         conexao.getConexao();
+        Connection instancia = conexao.getConexao();
+        if(instancia != null) {
+            System.out.println("conectou");
+        }else {
+            System.out.println("falhou");
+        }
 
     }
 }
