@@ -1,9 +1,11 @@
+package sgcm.src.main.java;
+
 import java.sql.Connection;
 
-import br.ufac.sgcm.dao.ConexaoDB;
-import br.ufac.sgcm.model.Especialidade;
-import br.ufac.sgcm.model.Profissional;
-import br.ufac.sgcm.model.Unidade;
+import sgcm.src.main.java.br.ufac.sgcm.dao.ConexaoDB;
+import sgcm.src.main.java.br.ufac.sgcm.model.Especialidade;
+import sgcm.src.main.java.br.ufac.sgcm.model.Profissional;
+import sgcm.src.main.java.br.ufac.sgcm.model.Unidade;
 
 public class App {
     public static void main(String[] args) {
@@ -26,9 +28,9 @@ public class App {
         p1.setUnidade(u1);
         p1.setEspecialidade(e1);
 
-        System.out.println(p1.getNome());
-        System.out.println(p1.getUnidade().getNome());
-        System.out.println(p1.getEspecialidade().getNome());
+        //System.out.println(p1.getNome());
+        //System.out.println(p1.getUnidade().getNome());
+        //System.out.println(p1.getEspecialidade().getNome());
 
         ConexaoDB conexao = new ConexaoDB();
         conexao.getConexao();
@@ -41,3 +43,4 @@ public class App {
 
     }
 }
+

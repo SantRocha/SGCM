@@ -1,12 +1,13 @@
-package br.ufac.sgcm.model;
+package sgcm.src.main.java.br.ufac.sgcm.model;
 
 import java.io.Serializable;
 
-public class Especialidade implements Serializable {
+public class Unidade implements Serializable {
     private Long id;
     private String nome;
+    private String endereco;
 
-    public Especialidade() {
+    public Unidade() {
 
     }
 
@@ -26,5 +27,12 @@ public class Especialidade implements Serializable {
         this.nome = nome;
     }
 
-    
+    public String getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
+    }
 }
+
