@@ -1,4 +1,4 @@
-package sgcm.src.main.java.br.ufac.sgcm.model;
+package br.ufac.sgcm.model;
 
 import java.io.Serializable;
 
@@ -58,4 +58,3 @@ public class Profissional implements Serializable {
         this.especialidade = especialidade;
     }
 }
-

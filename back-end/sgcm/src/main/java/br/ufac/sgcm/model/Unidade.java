@@ -1,4 +1,4 @@
-package sgcm.src.main.java.br.ufac.sgcm.model;
+package br.ufac.sgcm.model;
 
 import java.io.Serializable;
 
@@ -34,5 +34,6 @@ public class Unidade implements Serializable {
     public void setEndereco(String endereco) {
         this.endereco = endereco;
     }
-}
 
+    
+}
