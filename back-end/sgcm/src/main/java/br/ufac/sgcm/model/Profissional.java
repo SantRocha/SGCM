@@ -8,8 +8,8 @@ public class Profissional implements Serializable {
     private String registro;
     private String emial;
     private String telefone;
-    private Unidade unidade;
     private Especialidade especialidade;
+    private Unidade unidade;
 
     public Profissional() {
 
